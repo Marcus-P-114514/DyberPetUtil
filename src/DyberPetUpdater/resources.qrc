@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>resources/icon/close.svg</file>
+        <file>resources/icon/code_selected.svg</file>
+        <file>resources/icon/code_unselected.svg</file>
+        <file>resources/icon/edit_selected.svg</file>
+        <file>resources/icon/edit_unselected.svg</file>
+        <file>resources/icon/maximize.svg</file>
+        <file>resources/icon/menu.svg</file>
+        <file>resources/icon/minimize.svg</file>
+        <file>resources/icon/test_selected.svg</file>
+        <file>resources/icon/test_unselected.svg</file>
+    </qresource>
+    <qresource prefix="/fonts">
+        <file>resources/fonts/SourceHanSansCN-Regular.otf</file>
+    </qresource>
+</RCC>
