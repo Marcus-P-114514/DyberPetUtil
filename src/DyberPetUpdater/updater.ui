@@ -11,10 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Updater</string>
+   <string>呆啵宠物 · 资源包更新</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
+   <layout class="QGridLayout" name="windowContainer">
     <property name="leftMargin">
      <number>12</number>
     </property>
@@ -33,6 +33,7 @@
        <string notr="true">#shadeContainer{
 	border: 2px solid rgb(189,167,165);
 	border-radius: 10px;
+	background: rgb(241,234,235);
 }</string>
       </property>
       <property name="frameShape">
@@ -303,7 +304,7 @@ QPushButton:Pressed{
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
-           <spacer name="horizontalSpacer">
+           <spacer name="titleBarSpacerL">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -320,8 +321,8 @@ QPushButton:Pressed{
             <property name="styleSheet">
              <string notr="true">#appTitle{
 	font-size: 16px;
-	font-weight: bold;
 	color: #1f1f1f;
+	font-weight: bold;
 	background: transparent;
 }</string>
             </property>
@@ -331,7 +332,7 @@ QPushButton:Pressed{
            </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacer_2">
+           <spacer name="titleBarSpacerR">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -360,6 +361,608 @@ QPushButton:Pressed{
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0">
+           <widget class="QStackedWidget" name="appFrame">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#appFrame{
+	background: #fff;
+	border: 1px solid #fff;
+}</string>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="updaterPage">
+             <layout class="QVBoxLayout" name="verticalLayout_5">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_7">
+                <item>
+                 <widget class="QLabel" name="resPackLocationDesc">
+                  <property name="styleSheet">
+                   <string notr="true">#resPackLocationDesc{
+	background: transparent;
+	border: 0px solid #fff;
+	color: #211a1a;
+	font-size: 14px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>更新包位置：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="resourcePackEdit">
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit{
+	font-size: 14px;
+	border: 1px solid rgb(189,167,165);
+	color: rgb(189,167,165);
+	border-radius: 5px;
+	padding: 5px;
+}</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="browseResPack">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>64</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>64</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	background: rgb(241,234,235);
+	border: 0px solid rgb(241,234,235);
+	border-radius: 5px;
+	color: #534343;
+	font-size: 14px;
+	padding: 5px;
+}
+
+QPushButton:Hover{
+	font-weight: bold;
+	background: rgb(231,226,226);
+	color: #211a1a;
+}
+
+QPushButton:Pressed{
+	font-weight: bold;
+	background: #ffdad9;
+	color: #2d1516;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>浏览</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="updaterSpacerV">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>292</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="executeUpdate">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+	background: rgb(241,234,235);
+	border: 0px solid rgb(241,234,235);
+	border-radius: 5px;
+	color: #534343;
+	font-size: 14px;
+	padding: 5px;
+}
+
+QPushButton:Hover{
+	font-weight: bold;
+	background: rgb(231,226,226);
+	color: #211a1a;
+}
+
+QPushButton:Pressed{
+	font-weight: bold;
+	background: #ffdad9;
+	color: #2d1516;
+}</string>
+                </property>
+                <property name="text">
+                 <string>更新</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="backupPage">
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <item>
+               <widget class="QLabel" name="backupTitle">
+                <property name="styleSheet">
+                 <string notr="true">#backupTitle{
+	font-size: 16px;
+	font-weight: bold;
+	color: #211a1a;
+}</string>
+                </property>
+                <property name="text">
+                 <string>备份</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="backupGuide">
+                <property name="styleSheet">
+                 <string notr="true">#backupGuide{
+	font-size: 14px;
+	color: #211a1a
+}</string>
+                </property>
+                <property name="text">
+                 <string>请选择您需要备份的部分，然后按下「备份」按钮。</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_8">
+                <item>
+                 <widget class="QPushButton" name="backupRes">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	background: rgb(241,234,235);
+	border: 0px solid rgb(241,234,235);
+	border-radius: 5px;
+	color: #534343;
+	font-size: 14px;
+	padding: 5px;
+}
+
+QPushButton:Hover{
+	font-weight: bold;
+	background: rgb(231,226,226);
+	color: #211a1a;
+}
+
+QPushButton:Pressed{
+	font-weight: bold;
+	background: #ffdad9;
+	color: #2d1516;
+}
+
+QPushButton:Checked{
+	font-weight: bold;
+	background: #ffdad9;
+	color: #2d1516;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>桌宠资源文件</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="backupData">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	background: rgb(241,234,235);
+	border: 0px solid rgb(241,234,235);
+	border-radius: 5px;
+	color: #534343;
+	font-size: 14px;
+	padding: 5px;
+}
+
+QPushButton:Hover{
+	font-weight: bold;
+	background: rgb(231,226,226);
+	color: #211a1a;
+}
+
+QPushButton:Pressed{
+	font-weight: bold;
+	background: #ffdad9;
+	color: #2d1516;
+}
+
+QPushButton:Checked{
+	font-weight: bold;
+	background: #ffdad9;
+	color: #2d1516;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>桌宠数据</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="backupStart">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	background: rgb(241,234,235);
+	border: 0px solid rgb(241,234,235);
+	border-radius: 5px;
+	color: #534343;
+	font-size: 14px;
+	padding: 5px;
+}
+
+QPushButton:Hover{
+	font-weight: bold;
+	background: rgb(231,226,226);
+	color: #211a1a;
+}
+
+QPushButton:Pressed{
+	font-weight: bold;
+	background: #ffdad9;
+	color: #2d1516;
+}
+
+QPushButton:Checked{
+	font-weight: bold;
+	background: #ffdad9;
+	color: #2d1516;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>备份</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="restoreTitle">
+                <property name="styleSheet">
+                 <string notr="true">#restoreTitle{
+	font-size: 16px;
+	font-weight: bold;
+	color: #211a1a;
+	padding-top: 10px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>还原</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="restoreGuide">
+                <property name="styleSheet">
+                 <string notr="true">#restoreGuide{
+	font-size: 14px;
+	color: #211a1a
+}</string>
+                </property>
+                <property name="text">
+                 <string>如需还原备份文件，请在下方的文件选择框中选择备份文件，然后按下「还原」按钮。</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_9">
+                <item>
+                 <widget class="QLineEdit" name="backupLocationEdit">
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit{
+	font-size: 14px;
+	border: 1px solid rgb(189,167,165);
+	color: rgb(189,167,165);
+	border-radius: 5px;
+	padding: 5px;
+}</string>
+                  </property>
+                  <property name="placeholderText">
+                   <string>备份文件路径</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="browseBackup">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>64</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>64</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	background: rgb(241,234,235);
+	border: 0px solid rgb(241,234,235);
+	border-radius: 5px;
+	color: #534343;
+	font-size: 14px;
+	padding: 5px;
+}
+
+QPushButton:Hover{
+	font-weight: bold;
+	background: rgb(231,226,226);
+	color: #211a1a;
+}
+
+QPushButton:Pressed{
+	font-weight: bold;
+	background: #ffdad9;
+	color: #2d1516;
+}
+
+QPushButton:Checked{
+	font-weight: bold;
+	background: #ffdad9;
+	color: #2d1516;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>浏览</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="executeRestore">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>64</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>64</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	background: rgb(241,234,235);
+	border: 0px solid rgb(241,234,235);
+	border-radius: 5px;
+	color: #534343;
+	font-size: 14px;
+	padding: 5px;
+}
+
+QPushButton:Hover{
+	font-weight: bold;
+	background: rgb(231,226,226);
+	color: #211a1a;
+}
+
+QPushButton:Pressed{
+	font-weight: bold;
+	background: #ffdad9;
+	color: #2d1516;
+}
+
+QPushButton:Checked{
+	font-weight: bold;
+	background: #ffdad9;
+	color: #2d1516;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>还原</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="backupSpacerV">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>196</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="settingsPage">
+             <widget class="QWidget" name="layoutWidget">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>30</y>
+                <width>731</width>
+                <height>30</height>
+               </rect>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_10">
+               <item>
+                <widget class="QLabel" name="dyberPetLocationDesc">
+                 <property name="styleSheet">
+                  <string notr="true">#dyberPetLocationDesc{
+	background: transparent;
+	border: 0px solid #fff;
+	color: #211a1a;
+	font-size: 14px;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>桌宠路径：</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="appPathEdit">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit{
+	font-size: 14px;
+	border: 1px solid rgb(189,167,165);
+	color: rgb(189,167,165);
+	border-radius: 5px;
+	padding: 5px;
+}</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="browseAppPath">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>64</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>64</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{
+	background: rgb(241,234,235);
+	border: 0px solid rgb(241,234,235);
+	border-radius: 5px;
+	color: #534343;
+	font-size: 14px;
+	padding: 5px;
+}
+
+QPushButton:Hover{
+	font-weight: bold;
+	background: rgb(231,226,226);
+	color: #211a1a;
+}
+
+QPushButton:Pressed{
+	font-weight: bold;
+	background: #ffdad9;
+	color: #2d1516;
+}
+
+QPushButton:Checked{
+	font-weight: bold;
+	background: #ffdad9;
+	color: #2d1516;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>浏览</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -392,6 +995,442 @@ QPushButton:Pressed{
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <property name="leftMargin">
+           <number>24</number>
+          </property>
+          <property name="topMargin">
+           <number>9</number>
+          </property>
+          <property name="rightMargin">
+           <number>24</number>
+          </property>
+          <property name="bottomMargin">
+           <number>9</number>
+          </property>
+          <item>
+           <spacer name="navBarSpacer1">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>119</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QFrame" name="updaterNavbarContainer">
+              <property name="minimumSize">
+               <size>
+                <width>64</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>64</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#updaterNavbarContainer{
+	background: #ffdad9;
+	border: 0px solid #ffdad9;
+	border-radius: 12px;
+}</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <spacer name="updaterNavbarSpacerL">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>21</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="updaterNavbarIcon">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">#updaterNavbarIcon{
+	background: transparent;
+	border-image: url(:/icons/resources/icon/updater_selected.svg);
+}</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="updaterNavbarSpacerR">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>21</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="updaterNavbarText">
+              <property name="styleSheet">
+               <string notr="true">#updaterNavbarText{
+	background: transparent;
+	border: 0px solid #fff;
+	color: #2d1516;
+	font-size: 12px;
+	font-weight: bold;
+}</string>
+              </property>
+              <property name="text">
+               <string>更新</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="navBarSpacer2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>119</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QFrame" name="backupNavbarContainer">
+              <property name="minimumSize">
+               <size>
+                <width>64</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>64</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#backupNavbarContainer{
+	background: transparent;
+	border: 0px solid #ffdad9;
+	border-radius: 12px;
+}</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <spacer name="backupNavbarSpacerL">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>21</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="backupNavbarIcon">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">#backupNavbarIcon{
+	background: transparent;
+	border-image: url(:/icons/resources/icon/backup.svg);
+}</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="backupNavbarSpacerR">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>21</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="backupNavbarText">
+              <property name="styleSheet">
+               <string notr="true">#backupNavbarText{
+	background: transparent;
+	border: 0px solid #fff;
+	color: #2d1516;
+	font-size: 12px;
+}</string>
+              </property>
+              <property name="text">
+               <string>备份/还原</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="navBarSpacer3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>119</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QFrame" name="settingsNavbarContainer">
+              <property name="minimumSize">
+               <size>
+                <width>64</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>64</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#settingsNavbarContainer{
+	background: transparent;
+	border: 0px solid #ffdad9;
+	border-radius: 12px;
+}</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <spacer name="settingsNavbarSpacerL">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>21</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="settingsNavbarIcon">
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">#settingsNavbarIcon{
+	background: transparent;
+	border-image: url(:/icons/resources/icon/settings.svg);
+}</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="settingsNavbarSpacerR">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>21</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="settingsNavbarText">
+              <property name="styleSheet">
+               <string notr="true">#settingsNavbarText{
+	background: transparent;
+	border: 0px solid #fff;
+	color: #2d1516;
+	font-size: 12px;
+}</string>
+              </property>
+              <property name="text">
+               <string>偏好设置</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="navBarSpacer4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>119</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
         </widget>
        </item>
       </layout>

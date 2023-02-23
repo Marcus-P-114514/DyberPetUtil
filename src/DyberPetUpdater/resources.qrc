@@ -10,8 +10,17 @@
         <file>resources/icon/minimize.svg</file>
         <file>resources/icon/test_selected.svg</file>
         <file>resources/icon/test_unselected.svg</file>
+        <file>resources/icon/backup.svg</file>
+        <file>resources/icon/backup_selected.svg</file>
+        <file>resources/icon/settings.svg</file>
+        <file>resources/icon/settings_selected.svg</file>
+        <file>resources/icon/updater.svg</file>
+        <file>resources/icon/updater_selected.svg</file>
     </qresource>
     <qresource prefix="/fonts">
         <file>resources/fonts/SourceHanSansCN-Regular.otf</file>
+    </qresource>
+    <qresource prefix="/qt/etc">
+        <file>resources/config/qt.conf</file>
     </qresource>
 </RCC>
